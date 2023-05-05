@@ -1,0 +1,141 @@
+@use "global" as *;
+.p-feature {
+  background-color: #f8f8f8;
+  padding-bottom: rem(150);
+  @include mq("md") {
+    padding-top: rem(117);
+    padding-bottom: rem(323);
+  }
+}
+
+.p-feature__inner {
+  max-width: rem(500);
+  width: 100%;
+  padding-right: $padding-sp;
+  padding-left: $padding-sp;
+  margin-right: auto;
+  margin-left: auto;
+  @include mq("md") {
+    max-width: rem(1110);
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+}
+
+.p-feature__head {
+  font-size: rem(24);
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+  @include mq("md") {
+    font-size: rem(32);
+    padding-left: rem(154);
+    padding-right: rem(154);
+  }
+}
+
+.p-feature__head::before {
+  @include mq("md") {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: rem(114);
+    height: rem(1);
+    background-color: $black;
+  }
+}
+
+.p-feature__head::after {
+  @include mq("md") {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: rem(114);
+    height: rem(1);
+    background-color: $black;
+  }
+}
+
+.p-feature__wrapper {
+  margin-top: rem(30);
+  @include mq("md") {
+    margin-top: rem(65);
+  }
+}
+
+.p-feature__items {
+  display: block;
+  width: 85%;
+  margin: 0 auto;
+  @include mq("md") {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: rem(50);
+    grid-row-gap: rem(46);
+  }
+}
+
+.p-feature__item + .p-feature__item {
+  margin-top: rem(30);
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+.p-feature__img {
+  @include mq("md") {
+    width: calc(260 / 320) * 100%;
+    margin: 0 auto;
+  }
+}
+
+.p-feature__title {
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  width: fit-content;
+  margin: 0 auto;
+  background:linear-gradient(transparent 60%, rgba(119,198,194,0.2) 60%);
+  margin-top: rem(16);
+  @include mq("md") {
+    font-size: rem(23);
+    line-height: calc(32 / 23);
+    margin: rem(20) auto 0;
+  }
+}
+
+.p-feature__item span {
+  display: block;
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  line-height: calc(32 / 23);
+  text-align: center;
+  margin: 0 auto ;
+  width: fit-content;
+  background:linear-gradient(transparent 60%, rgba(119,198,194,0.2) 60%);
+  @include mq("md") {
+    font-size: rem(23);
+  }
+}
+
+.p-feature__text {
+  font-size: rem(12);
+  font-family: $noto-jp;
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  line-height: calc(24 / 14);
+  margin-top: rem(16);
+  @include mq("md") {
+    font-size: rem(14);
+    margin-top: rem(20);
+  }
+}
+

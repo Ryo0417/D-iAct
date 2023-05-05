@@ -1,0 +1,142 @@
+@use "global" as *;
+.p-contact {
+  padding: rem(50) 0;
+  background: url(../images/top/contact-bg.png) no-repeat center center / cover;
+  @include mq("md") {
+    padding: rem(106) 0;
+  }
+}
+
+.p-contact__inner {
+  max-width: rem(500);
+  width: 100%;
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  margin: 0 auto;
+  @include mq("md") {
+    max-width: rem(1547);
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+}
+
+.p-contact__content {
+  @include mq("md") {
+    display: flex;
+    border: 1px solid #F8F8F8;
+  }
+}
+
+.p-contact__left {
+  width: 100%;
+  text-align: center;
+  color: #F8F8F8;
+  padding: rem(15);
+  border: 1px solid #F8F8F8;
+  @include mq("md") {
+    width: 50%;
+    padding: rem(60) rem(144) rem(70) rem(147);
+    border-right: 1px solid #F8F8F8;
+  }
+}
+
+.p-contact__left span {
+  font-size: rem(12);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  @include mq("md") {
+    font-size: rem(22);
+  }
+}
+
+.p-contact__left h2 {
+  font-size: rem(20);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  margin-top: rem(10);
+  @include mq("md") {
+    font-size: rem(36);
+    margin-top: rem(18);
+  }
+}
+
+.p-contact__left p {
+  font-size: rem(12);
+  font-family: $noto-jp;
+  font-weight: $regular;
+  letter-spacing: 0.14em;
+  margin-top: rem(15);
+  @include mq("md") {
+    font-size: rem(18);
+    margin-top: rem(30);
+  }
+}
+
+.p-contact__right {
+  border: 1px solid #F8F8F8;
+  padding: rem(15);
+  margin-top: rem(20);
+  @include mq("md") {
+    flex: 1;
+    padding-top: rem(43);
+    padding-bottom: rem(46);
+    margin-top: 0;
+  }
+}
+
+.p-contact__right figure {
+  width: rem(24);
+  margin: 0 auto;
+  @include mq("md") {
+    width: rem(48);
+  }
+}
+
+.p-contact__right h2 {
+  font-size: rem(12);
+  font-family: $noto-jp;
+  font-weight: $regular;
+  color: #fff;
+  text-align: center;
+  padding-bottom: rem(15);
+  margin-top: rem(17);
+  position: relative;
+  @include mq("md") {
+    font-size: rem(19);
+    padding-bottom: rem(30);
+    margin-top: rem(34);
+  }
+}
+
+.p-contact__right h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(19);
+  height: 1px;
+  background-color: #fff;
+  @include mq("md") {
+    width: rem(38);
+    height: 1px;
+  }
+}
+
+.p-contact__right p {
+  font-size: rem(12);
+  font-family: $noto-jp;
+  font-weight: $regular;
+  letter-spacing: 0.13em;
+  color: #fff;
+  text-align: center;
+  margin-top: rem(20);
+  @include mq("md") {
+    font-size: rem(16);
+    margin-top: rem(38);
+  }
+}
+

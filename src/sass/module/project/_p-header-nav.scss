@@ -1,0 +1,24 @@
+@use "global" as *;
+.p-header-nav__items {
+  @include mq("md") {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.p-header-nav__item + .p-header-nav__item {
+  @include mq("md") {
+    margin-left: 4%;
+  }
+}
+
+.p-header-nav__item a {
+  font-family: Futura, sans-serif;
+  font-style: oblique;
+  text-transform: uppercase;
+  @include mq("md") {
+    font-size: rem(18);
+    letter-spacing: 0.14em;
+  }
+}

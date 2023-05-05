@@ -1,0 +1,98 @@
+@use "global" as *;
+.p-use {
+  padding-top: rem(70);
+  padding-bottom: rem(80);
+  @include mq("md") {
+    padding-top: rem(141);
+    padding-bottom: rem(158);
+    position: relative;
+  }
+}
+
+.p-use__inner {
+  max-width: rem(500);
+  @include mq("md") {
+    max-width: 1300px;
+  }
+}
+
+.p-use__head {
+  font-size: rem(14);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin-top: rem(11);
+  @include mq("md") {
+    font-size: rem(22);
+  }
+}
+
+.p-use__head span {
+  display: block;
+  font-size: rem(20);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin-top: rem(12);
+  @include mq("md") {
+    font-size: rem(36);
+    margin-top: rem(25);
+  }
+}
+
+.p-use__subHead {
+  font-size: rem(12);
+  font-family: $noto-jp;
+  font-weight: $regular;
+  text-align: center;
+  margin-top: rem(20);
+  @include mq("md") {
+    font-size: rem(18);
+    margin-top: rem(40);
+  }
+}
+
+.p-use__img {
+  @include mq("md") {
+    margin-top: rem(60);
+  }
+}
+
+.p-use__img1 {
+  margin-top: rem(20);
+}
+
+.p-use__img2,
+.p-use__img3 {
+  margin-top: rem(40);
+}
+
+.p-use__img1,
+.p-use__img2 {
+  position: relative;
+}
+
+.p-use__img1::after, 
+.p-use__img2::after {
+  content: "";
+  position: absolute;
+  bottom: rem(-25);
+  left: 50%;
+  width: rem(15);
+  height: rem(15);
+  transform: translateX(-50%) rotate(90deg);
+  background: url(../images/top/use-arrow-sp.svg) no-repeat center center / cover;
+}
+
+.p-use__reception {
+  @include mq("md") {
+    position: absolute;
+    top: 50%;
+    right: rem(10);
+    transform: translateY(-50%);
+    width: rem(110);
+    height: rem(520);
+  }
+}

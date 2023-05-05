@@ -1,0 +1,136 @@
+@use "global" as *;
+.p-spec {
+  padding-bottom: rem(70);
+  position: relative;
+  @include mq("md") {
+    padding-bottom: rem(140);
+  }
+}
+
+.p-spec__inner {
+  padding-top: rem(55);
+  background-color: #f8f8f8;
+  opacity: 0.7;
+  @include mq("md") {
+    max-width: rem(1250);
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+    padding-top: rem(114);
+    padding-bottom: rem(163);
+  }
+}
+
+.p-spec__head {
+  font-size: rem(12);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  @include mq("md") {
+    font-size: rem(22);
+  }
+}
+
+.p-spec__head span {
+  display: block;
+  font-size: rem(20);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  margin-top: rem(12);
+  @include mq("md") {
+    font-size: rem(36);
+    margin-top: rem(25);
+  }
+}
+
+.p-spec__content {
+  display: flex;
+  flex-direction: column-reverse;
+  @include mq("md") {
+    flex-direction: initial;
+    justify-content: center;
+    margin-top: rem(70);
+  }
+}
+
+.p-spec__body {
+  @include mq("md") {
+    max-width: rem(339);
+    width: 100%;
+    padding-left: rem(11);
+  }
+}
+
+.p-spec__items + .p-spec__items {
+  margin-top: rem(12);
+  @include mq("md") {
+    margin-top: rem(24);
+  }
+}
+
+.p-spec__items dt {
+  font-size: rem(11);
+  font-family: $noto-jp;
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  @include mq("md") {
+    font-size: rem(14);
+  }
+}
+
+.p-spec__items dd {
+  font-size: rem(13);
+  font-family: $noto-jp;
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  padding-bottom: rem(7);
+  margin-top: rem(5);
+  border-bottom: 1px solid $black;
+  position: relative;
+  @include mq("md") {
+    font-size: rem(20);
+    padding-bottom: rem(15);
+    margin-top: rem(10);
+  }
+}
+
+.p-spec__items dd::before {
+  content: "";
+  position: absolute;
+  bottom: rem(-3);
+  left: rem(-5);
+  width: rem(5);
+  height: rem(5);
+  border-radius: 50%;
+  background-color: $black;
+  @include mq("md") {
+    bottom: rem(-6);
+    left: rem(-10);
+    width: rem(11);
+    height: rem(11);
+  }
+}
+
+.p-spec__img {
+  width: 50%;
+  margin: rem(30) auto;
+  @include mq("md") {
+    max-width: rem(278);
+    width: 100%;
+    margin: initial;
+    margin-left: rem(130);
+  }
+}
+
+.p-spec__reception {
+  @include mq("md") {
+    position: absolute;
+    top: rem(32);
+    right: 0;
+    width: rem(110);
+    height: rem(580);
+    background: url(../images/top/spec-text.svg) no-repeat center center / cover;
+  }
+}

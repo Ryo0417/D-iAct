@@ -1,0 +1,91 @@
+@use "global" as *;
+.p-safety {
+  padding-top: rem(60);
+  padding-bottom: rem(70);
+  background: url(../images/top/safety-bg.png) no-repeat center center / cover;
+  @include mq("md") {
+    width: calc(1751 / 1920) * 100%;
+    padding-top: rem(121);
+    padding-bottom: rem(145);
+    position: relative;
+  }
+}
+
+.p-safety__inner {
+  max-width: rem(500);
+  @include mq("md") {
+    max-width: 1300px;
+    padding-right: rem(100);
+  }
+}
+
+.p-safety__head {
+  font-size: rem(13);
+  font-weight: $regular;
+  letter-spacing: 0.2em;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  @include mq("md") {
+    font-size: rem(18);
+  }
+}
+
+.p-safety__head span {
+  display: block;
+  font-size: rem(18);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  color: #fff;
+  padding-bottom: rem(12);
+  margin-top: rem(10);
+  @include mq("md") {
+    font-size: rem(34);
+    padding-bottom: rem(25);
+    margin-top: rem(18);
+  }
+}
+
+.p-safety__head span::after {
+  @include mq("md") {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: rem(30);
+    height: 1px;
+    background-color: #fff;
+  }
+}
+
+.p-safety__subHead {
+  font-size: rem(11);
+  font-family: $noto-jp;
+  font-weight: $regular;
+  letter-spacing: 0.06em;
+  line-height: 1.8;
+  color: #fff;
+  margin-top: rem(12);
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: calc(36 / 16);
+    margin-top: rem(24);
+  }
+}
+
+.p-safety__img {
+  @include mq("md") {
+    margin-top: rem(63);
+  }
+}
+
+.p-safety__reception {
+  @include mq("md") {
+    position: absolute;
+    top: rem(30);
+    right: rem(18);
+    width: rem(98);
+    height: rem(536);
+  }
+}

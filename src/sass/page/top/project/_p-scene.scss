@@ -1,0 +1,120 @@
+@use "global" as *;
+.p-scene {
+  padding-top: rem(70);
+  padding-bottom: rem(80);
+  overflow: hidden;
+  @include mq("md") {
+    padding-top: rem(153);
+    padding-bottom: rem(175);
+  }
+}
+
+.p-scene__inner {
+  max-width: rem(500);
+  @include mq("md") {
+    max-width: 1300px;
+  }
+}
+
+.p-scene__head {
+  font-size: rem(14);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  @include mq("md") {
+    font-size: rem(22);
+  }
+}
+
+.p-scene__head span {
+  display: block;
+  font-size: rem(20);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin-top: rem(12);
+  @include mq("md") {
+    font-size: rem(36);
+    margin-top: rem(25);
+  }
+}
+
+.p-scene__subHead {
+  font-size: rem(12);
+  font-family: $noto-jp;
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  margin-top: rem(20);
+  @include mq("md") {
+    font-size: rem(18);
+    text-align: center;
+    margin-top: rem(40);
+  }
+}
+
+.p-scene__items {
+  margin-top: rem(40);
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: rem(100);
+    grid-row-gap: rem(68);
+    margin-top: rem(82);
+  }
+}
+
+.p-scene__item + .p-scene__item {
+  margin-top: rem(30);
+  @include mq("md") {
+    margin-top: 0;
+  }
+}
+
+.p-scene__title {
+  font-size: rem(16);
+  font-weight: $regular;
+  letter-spacing: 0.08em;
+  padding-bottom: rem(5);
+  margin-top: rem(12);
+  border-bottom: 1px solid #8CC4C1;
+  @include mq("md") {
+    font-size: rem(27);
+    padding-bottom: rem(8);
+    margin-top: rem(25);
+  }
+}
+
+.p-scene__text {
+  font-size: rem(12);
+  font-family: $noto-jp;
+  font-weight: $regular;
+  letter-spacing: 0.06em;
+  line-height: 1.8;
+  text-align: justify;
+  margin-top: rem(14);
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: calc(36 / 16);
+    margin-top: rem(28);
+  }
+}
+
+.p-scene__animation {
+  display: -webkit-box;
+  width: rem(1500);
+  position: relative;
+  z-index: -1;
+  @include mq("md") {
+    width: rem(3060);
+    margin-top: rem(-60);
+  }
+}
+
+.p-scene__animation img {
+  animation: infinite1 300s -150s linear infinite;
+  padding: 0 rem(100);
+}

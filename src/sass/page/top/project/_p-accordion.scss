@@ -1,0 +1,117 @@
+@use "global" as *;
+.p-accordion__title {
+  font-size: rem(13);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  font-family: $noto-jp;
+  font-weight: $bold;
+  letter-spacing: 0.07em;
+  padding: rem(16) rem(27) rem(16) rem(17);
+  background-color: #fff;
+  border-bottom: 1px solid #E5E5E5;
+  transition: transform 0.3s;
+  @include mq("md") {
+    font-size: rem(18);
+    padding: rem(32) rem(54) rem(33) rem(34);
+  }
+}
+
+.p-accordion__title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: rem(12);
+  transform: translateY(-50%);
+  width: rem(15);
+  height: rem(2);
+  background-color: $black;
+  @include mq("md") {
+    right: rem(30);
+    width: rem(29);
+    height: rem(2);
+  }
+}
+
+.p-accordion__title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: rem(18.5);
+  transform: translateY(-50%);
+  width: rem(2);
+  height: rem(15);
+  background-color: $black;
+  transition: transform 0.3s;
+  @include mq("md") {
+    right: rem(43);
+    width: rem(2);
+    height: rem(29);
+  }
+}
+
+.p-accordion__title.open::after {
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  transition: transform 0.3s;
+}
+
+.p-accordion__title span {
+  font-size: rem(18);
+  font-family: $second-font-family;
+  font-weight: $bold;
+  letter-spacing: 0.08em;
+  line-height: 1.4em;
+  padding-right: rem(8);
+  @include mq("md") {
+    font-size: rem(32);
+    padding-right: rem(23);
+    line-height: 0.8em;
+  }
+}
+
+.p-accordion__title h3 {
+  font-size: rem(14);
+  font-family: $noto-jp;
+  font-weight: $bold;
+  letter-spacing: 0.07em;
+  @include mq("md") {
+    font-size: rem(18);
+    line-height: calc(30 / 18);
+  }
+}
+
+.p-accordion__content {
+  display: none;
+  padding: rem(18) rem(34) rem(18) rem(17);
+  background-color: #fff;
+  @include mq("md") {
+    padding: rem(36) rem(68) rem(36) rem(35);
+  }
+}
+
+.p-accordion__content p {
+  font-size: rem(12);
+  font-family: $noto-jp;
+  font-weight: $regular;
+  letter-spacing: 0.09em;
+  line-height: 1.8;
+  padding-left: rem(12);
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: calc(40 / 16);
+    padding-left: rem(23);
+  }
+}
+
+.p-accordion__content span {
+  display: block;
+  font-size: rem(18);
+  font-family: $second-font-family;
+  font-weight: $bold;
+  letter-spacing: 0.08em;
+  color: #9D0000;
+  @include mq("md") {
+    font-size: rem(32);
+  }
+}

@@ -1,0 +1,86 @@
+@use "global" as *;
+.p-footer {
+  background-color: $black;
+  position: relative;
+  padding-top: rem(36);
+  padding-bottom: rem(45);
+  margin-top: rem(-2);
+  @include mq("md") {
+    padding-top: rem(73);
+    padding-bottom: rem(90);
+  }
+}
+
+.p-footer__inner {
+  max-width: rem(500);
+  width: 100%;
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  margin: 0 auto;
+  @include mq("md") {
+    max-width: rem(1520);
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+}
+
+.p-footer__wrapper {
+  color: #fff;
+  @include mq("md") {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.p-footer__logo {
+  width: rem(85);
+  margin: 0 auto;
+  @include mq("md") {
+    width: rem(148);
+    margin: initial;
+  }
+}
+
+.p-footer__nav {
+  text-align: center;
+  @include mq("md") {
+    text-align: initial;
+  }
+}
+
+.p-footer__items {
+  margin-top: rem(25);
+  @include mq("md") {
+    display: flex;
+    gap: rem(50);
+  }
+}
+
+.p-footer__item a {
+  display: block;
+  font-size: rem(12);
+  font-family: "Futura", sans-serif;
+  font-style: Oblique;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: rem(15) 0;
+  @include mq("md") {
+    font-size: rem(18);
+  }
+}
+
+.p-footer__copyright {
+  font-size: rem(10);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  color: #fff;
+  text-align: center;
+  margin-top: rem(20);
+  @include mq("md") {
+    font-size: rem(10);
+    margin-top: rem(186);
+    text-align: right;
+  }
+}
+

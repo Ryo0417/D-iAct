@@ -1,0 +1,32 @@
+@use "global" as *;
+.c-pagetop {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  bottom: rem(340);
+  right: rem(15);
+  width: rem(35);
+  height: rem(35);
+  z-index: 5000;
+  @include mq("md") {
+    bottom: rem(380);
+    right: rem(56);
+    width: rem(70);
+    height: rem(70);
+  }
+}
+
+.c-pagetop::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: rem(8);
+  height: rem(8);
+  background: url(../images/top/arrow.svg) no-repeat center center / cover;
+  @include mq("md") {
+    width: rem(12);
+    height: rem(12);
+  }
+}

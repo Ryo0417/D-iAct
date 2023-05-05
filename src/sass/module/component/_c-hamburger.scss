@@ -1,0 +1,69 @@
+@use "global" as *;
+.c-hamburger span {
+  display: block;
+  left: 32%;
+  height: rem(2);
+  // transform: translateX(-50%);
+  background-color: $black;
+  transition: transform 0.3s;
+  @include mq("md") {
+    left: 34%;
+  }
+}
+
+.c-hamburger span:nth-child(1) {
+  position: absolute;
+  top: rem(16);
+  width: rem(16);
+  @include mq("md") {
+    top: rem(40);
+    width: rem(32);
+  }
+}
+
+.c-hamburger span:nth-child(2) {
+  position: absolute;
+  top: rem(22);
+  width: rem(12);
+  @include mq("md") {
+    top: rem(49);
+    width: rem(25);
+  }
+}
+
+.c-hamburger span:nth-child(3) {
+  position: absolute;
+  top: rem(28);
+  width: rem(8);
+  @include mq("md") {
+    top: rem(58);
+    width: rem(16);
+  }
+}
+
+// active
+.c-hamburger.is-active {
+  & span:nth-child(1) {
+    width: rem(16);
+    transform: rotate(45deg);
+    top: rem(22);
+    @include mq("md") {
+      width: rem(32);
+      top: rem(45);
+    }
+  }
+
+  & span:nth-child(2) {
+    display: none;
+  }
+
+  & span:nth-child(3) {
+    width: rem(16);
+    transform: rotate(-45deg);
+    top: rem(22);
+    @include mq("md") {
+      width: rem(32);
+      top: rem(45);
+    }
+  }
+}

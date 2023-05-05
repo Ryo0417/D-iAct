@@ -1,0 +1,56 @@
+@use "global" as *;
+.p-animation-roop {
+  overflow: hidden;
+}
+
+.p-animation-roop__wrapper1 {
+  display: -webkit-box;
+  width: rem(2600);
+  margin-top: rem(30);
+  @include mq("md") {
+    width: rem(5219);
+    margin-top: rem(145);
+  }
+}
+
+.p-animation-roop__wrapper1 img {
+  animation: infinite1 300s -150s linear infinite;
+  padding: 0 rem(50);
+  @include mq("md") {
+    padding: 0 rem(100);
+  }
+}
+
+.p-animation-roop__wrapper2 {
+  display: -webkit-box;
+  width: rem(2600);
+  @include mq("md") {
+    width: rem(5219);
+  }
+}
+
+.p-animation-roop__wrapper2 img {
+  animation: infinite2 300s -150s linear infinite;
+  padding: 0 rem(50);
+  @include mq("md") {
+    padding: 0 rem(100);
+  }
+}
+
+@keyframes infinite1 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes infinite2 {
+  0% {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
